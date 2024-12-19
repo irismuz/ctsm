@@ -827,7 +827,7 @@ EOF
             
             my $gridtype;
             $gridtype = "global";
-            if (index($res, '1x1_') != -1) {
+            if (index($res, '1x1') != -1) {
                $gridtype = "regional";
             }
             if (index($res, '5x5_amazon') != -1) {

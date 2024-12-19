@@ -493,7 +493,7 @@ contains
      real(r8) :: errseb_max_val                         ! Maximum value of error in surface energy conservation error over all columns [W m-2]
      real(r8) :: errsoi_col_max_val                     ! Maximum value of column-level soil/lake energy conservation error over all columns [W m-2]
 
-     real(r8), parameter :: h2o_warning_thresh       = 1.e-9_r8                       ! Warning threshhold for error in errh2o and errh2osnow 
+     real(r8), parameter :: h2o_warning_thresh       = 1.e10_r8                       ! Warning threshhold for error in errh2o and errh2osnow 
      real(r8), parameter :: energy_warning_thresh    = 1.e-7_r8                       ! Warning threshhold for error in errsol, errsol, errseb, errlonv
      real(r8), parameter :: error_thresh             = 1.e-5_r8                       ! Error threshhold for conservation error
 

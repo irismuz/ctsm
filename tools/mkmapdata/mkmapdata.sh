@@ -300,7 +300,8 @@ fi
 #----------------------------------------------------------------------
 
 if [ "$phys" = "clm4_5" ]; then
-    grids=(                    \
+    grids=( 
+           ##"Arctic_0.1x0.1_nomask"   \
            "0.5x0.5_nomask"     \
            "0.25x0.25_nomask"   \
            "0.125x0.125_nomask"   \
@@ -340,13 +341,16 @@ do
    if [ "$verbose" = "YES" ]; then
       echo $QUERYFIL
    fi
-   INGRID[nfile]=`$QUERYFIL`
+   INGRID[nfile]=`$QUERYFIL` #did not work (did not find the file path specified in namelist_defaults_ctsm_tools.xml so I wrote it below explicitly)
+   #INGRID[nfile]=/cluster/shared/noresm/inputdata/PolarRES/lnd/clm2/mappingdata/grids/SCRIPgrid_Arctic_0.1x0.1_nomask_c240619.nc #I had to define it here so that it is recognized since queryfil does not seem to work
+   echo "ingrid = ${INGRID[nfile]}" #added for testing, there is nothing inside
    if [ "$list" = "YES" ]; then
       echo "ingrid = ${INGRID[nfile]}"
       echo "ingrid = ${INGRID[nfile]}" >> $outfilelist
    fi
 
-   OUTFILE[nfile]=map_${grid}_${lmask}_to_${res}_nomask_aave_da_$CDATE.nc
+   #OUTFILE[nfile]=map_${grid}_${lmask}_to_${res}_nomask_aave_da_$CDATE.nc
+   OUTFILE[nfile]=/cluster/shared/noresm/inputdata/PolarRES/mappingdata/map_${grid}_${lmask}_to_${res}_nomask_aave_da_$CDATE.nc
 
    # Determine extra information about the source grid file
    SRC_EXTRA_ARGS[nfile]=""
@@ -564,7 +568,8 @@ until ((nfile>${#INGRID[*]})); do
    else
 
       cmd="$mpirun $ESMF_REGRID --ignore_unmapped -s ${INGRID[nfile]} "
-      cmd="$cmd -d $GRIDFILE -m conserve -w ${OUTFILE[nfile]}"
+      #cmd="$cmd -d $GRIDFILE -m conserve -w ${OUTFILE[nfile]}"
+      cmd="$cmd -d $GRIDFILE --src_loc center -w ${OUTFILE[nfile]}" 
       if [ $type = "regional" ]; then
         cmd="$cmd --dst_regional"
       fi

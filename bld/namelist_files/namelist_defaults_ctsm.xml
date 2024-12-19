@@ -2206,6 +2206,29 @@ use_crop=".true.">lnd/clm2/surfdata_map/ctsm5.1.dev052/landuse.timeseries_mpasa1
 <map frm_hgrid="1km-merge-10min"    frm_lmask="HYDRO1K-merge-nomask"  to_hgrid="10x15"   to_lmask="nomask"
 >lnd/clm2/mappingdata/maps/10x15/map_1km-merge-10min_HYDRO1K-merge-nomask_to_10x15_nomask_aave_da_c130411.nc</map>
 
+
+<!-- IM 2024-06-20: Added mapping files for Arctic_0.1x0.1 -->
+<!-- <map frm_hgrid="Arctic_0.1x0.1" frm_lmask="nomask"     to_hgrid="Arctic_0.1x0.1_nomask"   to_lmask="nomask" -->
+<!-- >PolarRES/lnd/clm2/mappingdata/maps/Arctic_0.1x0.1/map_Arctic_0.1x0.1_0.1x0.1_nomask_to_1x1_nomask_aave_da_c240620.nc</map> -->
+<map frm_hgrid="0.5x0.5" frm_lmask="nomask"     to_hgrid="Arctic_0.1x0.1_nomask"   to_lmask="nomask"
+>PolarRES/lnd/clm2/mappingdata/maps/Arctic_0.1x0.1/map_0.5x0.5_nomask_to_1x1_nomask_aave_da_c240620.nc</map>
+<map frm_hgrid="0.25x0.25" frm_lmask="nomask"     to_hgrid="Arctic_0.1x0.1_nomask"   to_lmask="nomask"
+>PolarRES/lnd/clm2/mappingdata/maps/Arctic_0.1x0.1/map_0.25x0.25_nomask_to_1x1_nomask_aave_da_c240620.nc</map>
+<map frm_hgrid="0.125x0.125" frm_lmask="nomask"     to_hgrid="Arctic_0.1x0.1_nomask"   to_lmask="nomask"
+>PolarRES/lnd/clm2/mappingdata/maps/Arctic_0.1x0.1/map_0.125x0.125_nomask_to_1x1_nomask_aave_da_c240620.nc</map>
+<map frm_hgrid="3x3min" frm_lmask="nomask"     to_hgrid="Arctic_0.1x0.1_nomask"   to_lmask="nomask"
+>PolarRES/lnd/clm2/mappingdata/maps/Arctic_0.1x0.1/map_3x3min_nomask_to_1x1_nomask_aave_da_c240620.nc</map>
+<map frm_hgrid="5x5min" frm_lmask="nomask"     to_hgrid="Arctic_0.1x0.1_nomask"   to_lmask="nomask"
+>PolarRES/lnd/clm2/mappingdata/maps/Arctic_0.1x0.1/map_5x5min_nomask_to_1x1_nomask_aave_da_c240620.nc</map>
+<map frm_hgrid="10x10min" frm_lmask="nomask"     to_hgrid="Arctic_0.1x0.1_nomask"   to_lmask="nomask"
+>PolarRES/lnd/clm2/mappingdata/maps/Arctic_0.1x0.1/map_10x10min_nomask_to_1x1_nomask_aave_da_c240620.nc</map>
+<map frm_hgrid="0.9x1.25" frm_lmask="nomask"     to_hgrid="Arctic_0.1x0.1_nomask"   to_lmask="nomask"
+>PolarRES/lnd/clm2/mappingdata/maps/Arctic_0.1x0.1/map_0.9x1.25_nomask_to_1x1_nomask_aave_da_c240620.nc</map>
+<map frm_hgrid="1km-merge-10min_HYDRO1K-merge-nomask" frm_lmask="nomask"     to_hgrid="Arctic_0.1x0.1_nomask"   to_lmask="nomask"
+>PolarRES/lnd/clm2/mappingdata/maps/Arctic_0.1x0.1/map_1km-merge-10min_HYDRO1K-merge-nomask_nomask_to_1x1_nomask_aave_da_c240620.nc</map>
+<!-- END IM 2024-06-20 -->
+
+
 <!-- mapping files for 360x720 START added on Mon Aug 23 14:38:04 2021-->
 <!-- These ones are needed since this grid is with longitude on 0 to 360 verses -180 to 180 for the 0.5x0.5 grid -->
 <!-- Created by lnd/clm/bld/namelist_files/createMapEntry.pl-->

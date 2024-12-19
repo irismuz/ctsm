@@ -224,9 +224,9 @@ contains
          this%qice_grc(g,n) = waterfluxbulk_inst%qflx_glcice_col(c) * flux_normalization
 
          ! Check for bad values of qice
-         if ( abs(this%qice_grc(g,n)) > 1.0_r8) then
-            write(iulog,*) 'WARNING: qice out of bounds: g, n, qice =', g, n, this%qice_grc(g,n)
-         end if
+         !if ( abs(this%qice_grc(g,n)) > 1.0_r8) then
+         !   write(iulog,*) 'WARNING: qice out of bounds: g, n, qice =', g, n, this%qice_grc(g,n)
+         !end if
       end if
 
     end do

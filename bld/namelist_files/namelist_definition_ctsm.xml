@@ -2154,9 +2154,10 @@ CLM run type.
     'branch' is a restart run in which properties of the output history files may be changed.
 </entry>
 
+<!-- IM 2024-06-19: Added resolution Arctic_0.1x0.1 -->
 <entry id="res" type="char*30" category="default_settings"
        group="default_settings"  
-       valid_values="512x1024,360x720cru,128x256,64x128,48x96,94x192,0.23x0.31,0.47x0.63,0.9x1.25,1.9x2.5,2.5x3.33,4x5,10x15,0.125nldas2,5x5_amazon,1x1_vancouverCAN,1x1_mexicocityMEX,1x1_asphaltjungleNJ,1x1_brazil,1x1_urbanc_alpha,1x1_numaIA,1x1_smallvilleIA,0.25x0.25,0.5x0.5,3x3min,5x5min,10x10min,0.33x0.33,0.125x0.125,ne3np4.pg3,ne4np4,ne5np4.pg3,ne16np4,ne16np4.pg3,ne30np4.pg2,ne30np4.pg3,ne30np4,ne60np4,ne120np4,ne120np4.pg2,ne120np4.pg3,ne0np4CONUS.ne30x8,ne0np4.ARCTIC.ne30x4,ne0np4.ARCTICGRIS.ne30x8,ne240np4,1km-merge-10min,C24,C48,C96,C192,C384,mpasa480,mpasa240,mpasa120,mpasa60,mpasa30,mpasa15">
+       valid_values="512x1024,360x720cru,128x256,64x128,48x96,94x192,0.23x0.31,0.47x0.63,0.9x1.25,1.9x2.5,2.5x3.33,4x5,10x15,0.125nldas2,5x5_amazon,1x1_vancouverCAN,1x1_mexicocityMEX,1x1_asphaltjungleNJ,1x1_brazil,1x1_urbanc_alpha,1x1_numaIA,1x1_smallvilleIA,0.25x0.25,0.5x0.5,3x3min,5x5min,10x10min,0.33x0.33,0.125x0.125,ne3np4.pg3,ne4np4,ne5np4.pg3,ne16np4,ne16np4.pg3,ne30np4.pg2,ne30np4.pg3,ne30np4,ne60np4,ne120np4,ne120np4.pg2,ne120np4.pg3,ne0np4CONUS.ne30x8,ne0np4.ARCTIC.ne30x4,ne0np4.ARCTICGRIS.ne30x8,ne240np4,1km-merge-10min,C24,C48,C96,C192,C384,mpasa480,mpasa240,mpasa120,mpasa60,mpasa30,mpasa15,Arctic_0.1x0.1">
 Horizontal resolutions
 Note: 0.25x0.25, 0.5x0.5, 5x5min, 10x10min, 3x3min, 1km-merge-10min and 0.33x0.33 are only used for CLM toolsI
 </entry> 
@@ -2193,7 +2194,7 @@ If 1, turn on the MEGAN model for BVOC's (Biogenic Volitile Organic Compounds)
 
 <entry id="sim_year" type="char*4" category="default_settings"
        group="default_settings" valid_values=
-"PtVg,1000,850,1100,1350,1600,1850,1855,1865,1875,1885,1895,1905,1915,1925,1935,1945,1955,1965,1975,1979,1980,1982,1985,1995,2000,2005,2010,2013,2015,2018,2025,2035,2045,2055,2065,2075,2085,2095,2105">
+"PtVg,1000,850,1100,1350,1600,1850,1855,1865,1875,1885,1895,1905,1915,1925,1935,1945,1955,1965,1975,1979,1980,1982,1985,1995,2000,2005,2010,2013,2014,2015,2016,2018,2025,2035,2045,2055,2065,2075,2085,2095,2100,2105">
 Year to simulate and to provide datasets for (such as surface datasets, initial conditions, aerosol-deposition, Nitrogen deposition rates etc.)
 A sim_year of 1000 corresponds to data used for testing only, NOT corresponding to any real datasets.
 A sim_year greater than 2015 corresponds to ssp_rcp scenario data
@@ -2204,7 +2205,7 @@ CLM datasets exist for years: 1000 (for testing), 1850, and 2000
 
 <entry id="sim_year_range" type="char*9" category="default_settings"
        group="default_settings" valid_values=
-"constant,1000-1002,1000-1004,850-1850,1850-1855,1850-2000,1850-2005,1850-2100,1980-2015,2000-2025,2000-2100">
+"constant,1000-1002,1000-1004,850-1850,1850-1855,1850-2000,1850-2005,1850-2100,1980-2015,1985-2014,1985-2100,2016-2099,2000-2025,2000-2100">
 Range of years to simulate transitory datasets for (such as dynamic: land-use datasets, aerosol-deposition, Nitrogen deposition rates etc.)
 Constant means simulation will be held at a constant year given in sim_year.
 A sim_year_range of 1000-1002 or 1000-1004 corresponds to data used for testing only, NOT corresponding to any real datasets.
