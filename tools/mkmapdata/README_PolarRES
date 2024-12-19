@@ -1,0 +1,8 @@
+map_3x3min_nomask_to_1x1_nomask_aave_da_c240620.nc
+map_5x5min_nomask_to_1x1_nomask_aave_da_c240620.nc
+map_Arctic_0.1x0.1_0.1x0.1_nomask_to_Arctic_0.1x0.1_nomask_aave_da_c240620.nc - not sure if this one is needed at all
+are only under /cluster/shared/noresm/inputdata/PolarRES/lnd/clm2/mappingdata/maps/Arctic_0.1x0.1 to provide space on home dir for 1 km file
+
+#the above is not true anymore, there is enough space now
+
+regridbatch_PolarRES.sh was used
